@@ -1,0 +1,11 @@
+/* ============================================================
+   ODTREK — Stylesheet Entry
+   Importa todos los módulos en el orden correcto.
+   ============================================================ */
+
+@import url('./fonts.css');       /* 1. Fuentes (@font-face) */
+@import url('./tokens.css');      /* 2. Variables + temas */
+@import url('./base.css');        /* 3. Reset + tipografía base */
+@import url('./components.css');  /* 4. Componentes reutilizables */
+@import url('./sections.css');    /* 5. Secciones específicas */
+@import url('./responsive.css');  /* 6. Media queries al final */

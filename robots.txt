@@ -1,0 +1,17 @@
+# ============================================================
+# ODTREK — robots.txt
+# ============================================================
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://odtrek.com/sitemap.xml
+
+# Bloqueo de scrapers agresivos (opcional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

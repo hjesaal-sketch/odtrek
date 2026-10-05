@@ -1,0 +1,195 @@
+/* ============================================================
+   COMPONENTES — Nav, botones, logo, footer, cards
+   ============================================================ */
+
+/* ---------- NAV ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 18px 0;
+  transition: all .35s ease;
+  backdrop-filter: blur(0);
+  background: transparent;
+}
+.nav.scrolled {
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+
+/* ---------- LOGO (Coalition) ---------- */
+.logo {
+  font-family: var(--font-brand);
+  font-size: 1.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: flex; align-items: center; gap: 10px;
+  line-height: 1;
+}
+.logo .dot {
+  width: 10px; height: 10px;
+  background: var(--primary); border-radius: 50%;
+  box-shadow: 0 0 16px var(--primary);
+  animation: pulse 2s infinite;
+}
+.logo-text { display: inline-block; }
+
+/* ---------- NAV LINKS ---------- */
+.nav-links {
+  display: flex; gap: 34px; align-items: center; list-style: none;
+}
+.nav-links a {
+  font-size: .85rem; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; position: relative; padding: 6px 0;
+  transition: color var(--dur-fast);
+}
+.nav-links a::after {
+  content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
+  background: var(--primary); transition: width var(--dur-fast) ease;
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover { color: var(--primary); }
+
+/* ---------- NAV ACTIONS ---------- */
+.nav-actions { display: flex; align-items: center; gap: 14px; }
+
+.theme-toggle {
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  cursor: pointer; display: grid; place-items: center;
+  transition: all var(--dur-fast);
+}
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.05);
+  border-color: var(--primary);
+}
+
+.btn-cta {
+  background: var(--primary); color: #fff;
+  padding: 12px 24px; border-radius: var(--radius-full);
+  font-weight: 700; font-size: .8rem; letter-spacing: 1.5px;
+  text-transform: uppercase; border: none; cursor: pointer;
+  transition: all var(--dur-fast);
+  box-shadow: 0 8px 24px -8px var(--primary);
+}
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -8px var(--primary-glow);
+}
+
+/* ---------- HAMBURGUESA ---------- */
+.hamburger {
+  display: none; background: none; border: none; cursor: pointer;
+  width: 42px; height: 42px; position: relative; z-index: 200;
+}
+.hamburger span {
+  display: block; width: 26px; height: 2px;
+  background: var(--text); margin: 6px auto;
+  transition: var(--dur-fast); border-radius: 2px;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ---------- BOTONES ---------- */
+.btn-primary, .btn-ghost {
+  padding: 16px 32px; border-radius: var(--radius-full);
+  font-weight: 700; font-size: .85rem; letter-spacing: 1.5px;
+  text-transform: uppercase; cursor: pointer; border: none;
+  transition: all var(--dur-fast);
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-primary {
+  background: var(--primary); color: #fff;
+  box-shadow: 0 12px 40px -10px var(--primary);
+}
+.btn-primary:hover {
+  transform: translateY(-3px); background: var(--primary-glow);
+}
+.btn-ghost {
+  background: rgba(255, 255, 255, .08); color: #fff;
+  border: 1px solid rgba(255, 255, 255, .25);
+  backdrop-filter: blur(10px);
+}
+.btn-ghost:hover { background: rgba(255, 255, 255, .18); border-color: #fff; }
+
+/* ---------- MARQUEE ---------- */
+.marquee {
+  background: var(--primary); color: #fff;
+  padding: 22px 0; overflow: hidden;
+  border-block: 1px solid rgba(0, 0, 0, .15);
+  position: relative;
+}
+.marquee-track {
+  display: flex; gap: 60px; white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  font-family: var(--font-display);
+  font-size: 1.6rem; letter-spacing: 2px;
+}
+.marquee-track span { display: inline-flex; align-items: center; gap: 60px; }
+.marquee-track i { color: var(--accent); font-size: 1rem; }
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 80px 0 30px;
+  position: relative; z-index: 2;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+  gap: 50px; margin-bottom: 60px;
+}
+.footer-brand .logo { margin-bottom: 20px; font-size: 2.1rem; letter-spacing: 4px; }
+.footer-brand p { color: var(--muted); font-size: .9rem; max-width: 340px; margin-bottom: 24px; }
+
+.socials { display: flex; gap: 12px; flex-wrap: wrap; }
+.socials a {
+  width: 44px; height: 44px; border-radius: var(--radius-sm);
+  background: var(--bg); border: 1px solid var(--border);
+  display: grid; place-items: center;
+  color: var(--text); transition: all var(--dur-fast);
+  font-size: 1rem;
+}
+.socials a:hover {
+  background: var(--primary); color: #fff;
+  border-color: var(--primary); transform: translateY(-4px);
+}
+
+.footer-col h4 {
+  font-family: var(--font-display); font-size: 1rem;
+  letter-spacing: 2px; margin-bottom: 22px; text-transform: uppercase;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footer-col a { color: var(--muted); font-size: .9rem; transition: color var(--dur-fast); }
+.footer-col a:hover { color: var(--primary); }
+
+.footer-news-desc { color: var(--muted); font-size: .85rem; margin-bottom: 14px; }
+.footer-news input {
+  width: 100%; padding: 12px 16px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--bg); color: var(--text);
+  margin-bottom: 10px; font-family: inherit;
+}
+.footer-news button {
+  width: 100%; padding: 12px; border-radius: var(--radius-sm);
+  background: var(--text); color: var(--bg);
+  border: none; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; font-size: .75rem; cursor: pointer;
+  transition: all var(--dur-fast);
+}
+.footer-news button:hover { background: var(--primary); color: #fff; }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 30px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px;
+  font-size: .85rem; color: var(--muted);
+}
+.footer-bottom .dev strong {
+  background: linear-gradient(90deg, var(--primary), var(--accent-glow));
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; font-weight: 800;
+}

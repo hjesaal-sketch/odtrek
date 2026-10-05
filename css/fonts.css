@@ -1,0 +1,32 @@
+/* ============================================================
+   FUENTES — ODTREK
+   Coalition Mediana: fuente de marca (solo logotipo).
+   Anton: display (títulos).
+   Inter: cuerpo.
+   ============================================================ */
+
+/* ---------- Coalición Mediana · Marca ODTREK ---------- */
+@font-face {
+  font-family: 'Coalition Mediana';
+  src: url('../assets/fonts/Coalition-Mediana.woff2') format('woff2'),
+       url('../assets/fonts/Coalition-Mediana.woff')  format('woff'),
+       url('../assets/fonts/Coalition-Mediana.ttf')   format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Si tienes más pesos, añade bloques aquí: Bold, Light, etc. */
+
+/* ============================================================
+   UTILIDAD GLOBAL
+   Aplica Coalition a cualquier elemento con .brand-font o .logo-text
+   ============================================================ */
+.brand-font,
+.logo,
+.logo-text {
+  font-family: 'Coalition Mediana', 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+}

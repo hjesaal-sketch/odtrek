@@ -1,0 +1,58 @@
+/* ============================================================
+   DESIGN TOKENS — ODTREK
+   ============================================================ */
+
+:root {
+  /* Paleta light */
+  --bg: #F4EFE7;
+  --surface: #FFFFFF;
+  --surface-2: #EAE2D6;
+
+  --primary: #E86A1C;         /* naranja ODTREK */
+  --primary-glow: #FF8A3D;
+  --secondary: #6B4A2B;       /* marrón fango */
+  --accent: #1F4D2B;          /* verde bosque */
+  --accent-glow: #3D8B5A;
+  --metal: #B8BCC2;           /* plata */
+
+  --text: #1A1A1A;
+  --muted: #5C5C5C;
+  --border: rgba(0, 0, 0, .08);
+  --shadow: 0 20px 60px -20px rgba(0, 0, 0, .25);
+
+  /* Tipografía */
+  --font-brand: 'Coalition Mediana', 'Anton', sans-serif;
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Layout */
+  --container: 1280px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --dur-fast: .3s;
+  --dur-base: .4s;
+  --dur-slow: .6s;
+}
+
+[data-theme="dark"] {
+  --bg: #0E0F0C;
+  --surface: #161814;
+  --surface-2: #1E2019;
+
+  --primary: #FF7A2B;
+  --primary-glow: #FF9A5A;
+  --secondary: #8A6440;
+  --accent: #3D8B5A;
+  --accent-glow: #5DB878;
+  --metal: #D6DAE0;
+
+  --text: #EDEDED;
+  --muted: #9A9A9A;
+  --border: rgba(255, 255, 255, .08);
+  --shadow: 0 20px 60px -20px rgba(0, 0, 0, .8);
+}
