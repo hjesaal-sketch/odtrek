@@ -44,3 +44,20 @@
   .hero-counter { display: none; }
   .hero-controls { bottom: auto; top: 110px; right: 5%; }
 }
+
+/* ---------- SPONSORS (responsive) ---------- */
+@media (max-width: 1024px) {
+  .sponsors { padding: 55px 0 70px; }
+  .sponsors-label { margin-bottom: 32px; }
+  .sponsors-label::before { margin-left: -100px; width: 40px; }
+  .sponsors-label::after  { margin-right: -100px; width: 40px; }
+  .sponsors-track { gap: 60px; animation-duration: 32s; }
+  .sponsors-track img { height: 52px; }
+}
+
+@media (max-width: 640px) {
+  .sponsors { padding: 45px 0 60px; }
+  .sponsors-label { font-size: .65rem; letter-spacing: 3px; }
+  .sponsors-track { gap: 45px; animation-duration: 26s; padding: 0 22px; }
+  .sponsors-track img { height: 42px; }
+}

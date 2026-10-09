@@ -95,6 +95,81 @@
   animation: scrollDown 1.8s infinite;
 }
 
+/* ---------- SPONSORS ---------- */
+.sponsors {
+  padding: 70px 0 90px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: relative; z-index: 2;
+  overflow: hidden;
+}
+.sponsors-label {
+  display: block;
+  font-size: .72rem; letter-spacing: 4px;
+  text-transform: uppercase; font-weight: 700;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 42px;
+  position: relative;
+}
+.sponsors-label::before,
+.sponsors-label::after {
+  content: ""; position: absolute; top: 50%;
+  width: 60px; height: 1px;
+  background: var(--border);
+}
+.sponsors-label::before { left: 50%; margin-left: -140px; }
+.sponsors-label::after  { right: 50%; margin-right: -140px; }
+
+.sponsors-marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg,
+    transparent 0%,
+    #000 12%,
+    #000 88%,
+    transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg,
+    transparent 0%,
+    #000 12%,
+    #000 88%,
+    transparent 100%);
+}
+.sponsors-track {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  width: max-content;
+  animation: sponsors-scroll 42s linear infinite;
+  padding: 0 45px;
+}
+.sponsors-track img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  opacity: .55;
+  filter: grayscale(100%) brightness(1.2);
+  transition: opacity var(--dur-base), filter var(--dur-base), transform var(--dur-base);
+  flex-shrink: 0;
+  user-select: none;
+  pointer-events: none;
+}
+[data-theme="light"] .sponsors-track img {
+  filter: grayscale(100%) brightness(.5);
+  opacity: .6;
+}
+.sponsors-marquee:hover .sponsors-track { animation-play-state: paused; }
+.sponsors-marquee:hover .sponsors-track img {
+  opacity: 1;
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.06);
+}
+
+@keyframes sponsors-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 /* ---------- EVENTOS ---------- */
 .eventos-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
 .evento {
