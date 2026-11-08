@@ -138,13 +138,13 @@
 .sponsors-track {
   display: flex;
   align-items: center;
-  gap: 90px;
+  gap: 60px;
   width: max-content;
   animation: sponsors-scroll 42s linear infinite;
   padding: 0 45px;
 }
 .sponsors-track img {
-  height: 64px;
+  height: 110px;
   width: auto;
   object-fit: contain;
   opacity: .55;
