@@ -1,0 +1,10 @@
+{
+  "name": "odtrek",
+  "version": "1.0.0",
+  "description": "Sitio web de ODTREK: producción de eventos de trekking, trail running, festivales y aventura.",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "resend": "^6.38.1"
+  }
+}
