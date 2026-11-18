@@ -1,6 +1,6 @@
 /* ============================================================
    FORM — "Avísame del regreso" / Contacto
-   Sin talla. Teléfono opcional.
+   Soporta campo `mensaje` opcional (solo si existe en el form).
    ============================================================ */
 
 const VALIDATORS = {
@@ -43,7 +43,7 @@ export function initForm() {
     }
 
     if (!ok) {
-      const firstErr = form.querySelector('.field.invalid input, .field.invalid select');
+      const firstErr = form.querySelector('.field.invalid input, .field.invalid select, .field.invalid textarea');
       if (firstErr) firstErr.focus();
       return;
     }
@@ -69,11 +69,11 @@ export function initForm() {
       alert('Hubo un error. Intenta de nuevo.');
     } finally {
       submitBtn.disabled = false;
-      submitBtn.querySelector('.btn-text').textContent = 'Avísame del regreso';
+      submitBtn.querySelector('.btn-text').textContent = 'Enviar';
     }
   });
 
-  form.querySelectorAll('input, select').forEach(el => {
+  form.querySelectorAll('input, select, textarea').forEach(el => {
     el.addEventListener('input', () => {
       const field = el.closest('.field');
       if (field) field.classList.remove('invalid');

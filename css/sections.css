@@ -385,6 +385,21 @@
   font-family: inherit; font-size: .95rem;
   transition: all var(--dur-fast);
 }
+.field textarea {
+  width: 100%; padding: 14px 16px; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--bg); color: var(--text);
+  font-family: inherit; font-size: .95rem;
+  resize: vertical;
+  min-height: 120px;
+  transition: all var(--dur-fast);
+}
+.field textarea:focus {
+  outline: none; border-color: var(--primary);
+  background: var(--surface);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 15%, transparent);
+}
+.field textarea.error { border-color: #E5484D; }
 .field input:focus, .field select:focus {
   outline: none; border-color: var(--primary);
   background: var(--surface);
