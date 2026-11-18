@@ -38,7 +38,7 @@ export default async function handler(req, res) {
     // 1. Notificación para ODTREK
     const notificacion = await resend.emails.send({
       from: 'ODTREK <onboarding@resend.dev>',
-      to: ['TU_EMAIL_AQUI'],
+      to: ['eosconnecting@gmail.com'],
       subject: `Nuevo registro: ${eventoNombre} — ${nombre} ${apellido}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
