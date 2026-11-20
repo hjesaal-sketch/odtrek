@@ -9,3 +9,4 @@
 @import url('./components.css');  /* 4. Componentes reutilizables */
 @import url('./sections.css');    /* 5. Secciones específicas */
 @import url('./responsive.css');  /* 6. Media queries al final */
+@import url('./evento.css');      /* 6. Páginas internas + lightbox */

@@ -9,6 +9,7 @@ import { initHero } from './hero.js';
 import { initForm } from './form.js';
 import { initNewsletter } from './newsletter.js';
 import { initReveal } from './reveal.js';
+import { initLightbox } from './lightbox.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initForm();
   initNewsletter();
   initReveal();
+  initLightbox();
 
   // Año dinámico en footer
   const yearEl = document.getElementById('year');
