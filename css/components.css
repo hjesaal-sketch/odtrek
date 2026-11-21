@@ -37,10 +37,10 @@
 
 /* ---------- NAV LINKS ---------- */
 .nav-links {
-  display: flex; gap: 34px; align-items: center; list-style: none;
+  display: flex; gap: 24px; align-items: center; list-style: none;
 }
 .nav-links a {
-  font-size: .85rem; font-weight: 600; letter-spacing: 1.5px;
+  font-size: .8rem; font-weight: 600; letter-spacing: 1.2px;
   text-transform: uppercase; position: relative; padding: 6px 0;
   transition: color var(--dur-fast);
 }
