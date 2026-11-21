@@ -59,6 +59,50 @@ const TIPOS = {
     cierre: 'Gracias por sumarte.',
   },
 
+  // Aventuras — destinos de viaje
+  'aventuras-playa': {
+    nombre: 'Aventuras · Playa / Costa',
+    esEvento: true,
+    emailSubject: '¡Listo! Te avisamos de las aventuras a la playa',
+    mensaje: 'Ya estás en la lista. Te avisaremos cuando haya fechas y destinos de playa confirmados.',
+    cierre: 'Gracias por sumarte.',
+  },
+  'aventuras-merida': {
+    nombre: 'Aventuras · Mérida',
+    esEvento: true,
+    emailSubject: '¡Listo! Te avisamos de las aventuras a Mérida',
+    mensaje: 'Ya estás en la lista. Te avisaremos cuando haya fechas y destinos de Mérida confirmados.',
+    cierre: 'Gracias por sumarte.',
+  },
+  'aventuras-gran-sabana': {
+    nombre: 'Aventuras · Gran Sabana',
+    esEvento: true,
+    emailSubject: '¡Listo! Te avisamos de las aventuras a la Gran Sabana',
+    mensaje: 'Ya estás en la lista. Te avisaremos cuando haya fechas y destinos de Gran Sabana confirmados.',
+    cierre: 'Gracias por sumarte.',
+  },
+  'aventuras-colonia-tovar': {
+    nombre: 'Aventuras · La Colonia Tovar',
+    esEvento: true,
+    emailSubject: '¡Listo! Te avisamos de las aventuras a La Colonia Tovar',
+    mensaje: 'Ya estás en la lista. Te avisaremos cuando haya fechas y destinos de La Colonia Tovar confirmados.',
+    cierre: 'Gracias por sumarte.',
+  },
+  'aventuras-otros': {
+    nombre: 'Aventuras · Otros destinos',
+    esEvento: true,
+    emailSubject: '¡Listo! Te avisamos de nuevas aventuras',
+    mensaje: 'Ya estás en la lista. Te avisaremos cuando sumemos nuevos destinos.',
+    cierre: 'Gracias por sumarte.',
+  },
+  'aventuras-todos': {
+    nombre: 'Aventuras · Todos los destinos',
+    esEvento: true,
+    emailSubject: '¡Listo! Te avisamos de todas las aventuras',
+    mensaje: 'Ya estás en la lista. Te avisaremos cuando haya novedades de cualquier destino.',
+    cierre: 'Gracias por sumarte.',
+  },
+
   // Newsletter general
   'newsletter': {
     nombre: 'Newsletter ODTREK',
@@ -68,7 +112,7 @@ const TIPOS = {
     cierre: 'Gracias por sumarte.',
   },
 
-  // Consultas de contacto (ahora sí hay campo de mensaje)
+  // Consultas de contacto
   'inscripcion': {
     nombre: 'Consulta de inscripción',
     esEvento: false,
