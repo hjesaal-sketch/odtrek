@@ -37,6 +37,27 @@ const TIPOS = {
     mensaje: 'Ya estás en la lista. Cuando tengamos la fecha del regreso del RunningFest, serás de los primeros en enterarte.',
     cierre: 'Nos vemos en la ruta.',
   },
+  'kids-ecocamp': {
+    nombre: 'EcoCamp Jr. (ODTREK Kids)',
+    esEvento: true,
+    emailSubject: '¡Listo! Te avisamos del EcoCamp Jr.',
+    mensaje: 'Ya estás en la lista. Te avisaremos cuando abramos las inscripciones del EcoCamp Jr.',
+    cierre: 'Gracias por sumarte.',
+  },
+  'kids-ttk': {
+    nombre: 'Todo Terreno Kids (ODTREK Kids)',
+    esEvento: true,
+    emailSubject: '¡Listo! Te avisamos del Todo Terreno Kids',
+    mensaje: 'Ya estás en la lista. Te avisaremos cuando el TTK esté listo.',
+    cierre: 'Gracias por sumarte.',
+  },
+  'kids-todos': {
+    nombre: 'ODTREK Kids (ambas actividades)',
+    esEvento: true,
+    emailSubject: '¡Listo! Te avisamos de ODTREK Kids',
+    mensaje: 'Ya estás en la lista. Te avisaremos cuando haya novedades de EcoCamp Jr. y Todo Terreno Kids.',
+    cierre: 'Gracias por sumarte.',
+  },
 
   // Newsletter general
   'newsletter': {
