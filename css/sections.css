@@ -98,7 +98,7 @@
 /* ---------- SPONSORS ---------- */
 .sponsors {
   padding: 70px 0 90px;
-  background: var(--bg);
+  background: #0E0F0C;
   border-bottom: 1px solid var(--border);
   position: relative; z-index: 2;
   overflow: hidden;
@@ -107,7 +107,7 @@
   display: block;
   font-size: .72rem; letter-spacing: 4px;
   text-transform: uppercase; font-weight: 700;
-  color: var(--muted);
+  color: #9A9A9A;
   text-align: center;
   margin-bottom: 42px;
   position: relative;
@@ -116,7 +116,7 @@
 .sponsors-label::after {
   content: ""; position: absolute; top: 50%;
   width: 60px; height: 1px;
-  background: var(--border);
+  background: rgba(255, 255, 255, .15);
 }
 .sponsors-label::before { left: 50%; margin-left: -140px; }
 .sponsors-label::after  { right: 50%; margin-right: -140px; }
@@ -153,10 +153,6 @@
   flex-shrink: 0;
   user-select: none;
   pointer-events: none;
-}
-[data-theme="light"] .sponsors-track img {
-  filter: grayscale(100%) brightness(.5);
-  opacity: .6;
 }
 .sponsors-marquee:hover .sponsors-track { animation-play-state: paused; }
 .sponsors-marquee:hover .sponsors-track img {
