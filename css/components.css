@@ -26,6 +26,7 @@
   text-transform: uppercase;
   display: flex; align-items: center; gap: 10px;
   line-height: 1;
+  color: #fff;
 }
 .logo .dot {
   width: 10px; height: 10px;
@@ -34,7 +35,6 @@
   animation: pulse 2s infinite;
 }
 .logo-text { display: inline-block; }
-
 /* ---------- NAV LINKS ---------- */
 .nav-links {
   display: flex; gap: 24px; align-items: center; list-style: none;
@@ -43,6 +43,7 @@
   font-size: .8rem; font-weight: 600; letter-spacing: 1.2px;
   text-transform: uppercase; position: relative; padding: 6px 0;
   transition: color var(--dur-fast);
+  color: #fff;
 }
 .nav-links a::after {
   content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
