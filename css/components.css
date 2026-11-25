@@ -26,7 +26,11 @@
   text-transform: uppercase;
   display: flex; align-items: center; gap: 10px;
   line-height: 1;
-  color: #fff;
+  color: #F4EFE7;
+  transition: color var(--dur-fast);
+}
+.nav.scrolled .logo {
+  color: var(--text);
 }
 .logo .dot {
   width: 10px; height: 10px;
@@ -35,6 +39,7 @@
   animation: pulse 2s infinite;
 }
 .logo-text { display: inline-block; }
+
 /* ---------- NAV LINKS ---------- */
 .nav-links {
   display: flex; gap: 24px; align-items: center; list-style: none;
@@ -43,7 +48,10 @@
   font-size: .8rem; font-weight: 600; letter-spacing: 1.2px;
   text-transform: uppercase; position: relative; padding: 6px 0;
   transition: color var(--dur-fast);
-  color: #fff;
+  color: #F4EFE7;
+}
+.nav.scrolled .nav-links a {
+  color: var(--text);
 }
 .nav-links a::after {
   content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
@@ -143,7 +151,7 @@ footer {
   grid-template-columns: 2fr 1fr 1fr 1.3fr;
   gap: 50px; margin-bottom: 60px;
 }
-.footer-brand .logo { margin-bottom: 20px; font-size: 2.1rem; letter-spacing: 4px; }
+.footer-brand .logo { margin-bottom: 20px; font-size: 2.1rem; letter-spacing: 4px; color: var(--text); }
 .footer-brand p { color: var(--muted); font-size: .9rem; max-width: 340px; margin-bottom: 24px; }
 
 .socials { display: flex; gap: 12px; flex-wrap: wrap; }
